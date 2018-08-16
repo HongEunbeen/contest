@@ -1,0 +1,15 @@
+<?php
+    include "dbconn.php";
+    $sql = "select * from signup where id='$id' and pwd='$pwd'";
+    $result = mysql_query($sql);
+    $count = mysql_num_rows($result); //-> select * 이었을 때
+    
+    if($count){
+            echo "<script>alert('어서오세요!'); location.href='index.php';</script>";
+    }else{
+        echo "<script>alert('ID나 비밀번호가 맞지 않습니다'); history.back(); </script>";
+        
+    }
+    mysql_close($connect);
+    ?>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
