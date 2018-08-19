@@ -1,3 +1,6 @@
+<?php 
+    session_start(); 
+   ?>
 <!DOCTYPE HTML>
 <!--
 	Phase Shift by TEMPLATED
@@ -39,7 +42,14 @@
 								<li><a href="page1.php">쿠폰 보관함</a></li>
 								<li><a href="page2.php">근처 맛집 및 쿠폰</a></li>
 								<li><a href="page3.php">동네 지도</a></li>
-								<li><a href="Login.php">로그인 및 회원가입</a></li>
+								<?php
+								if ($session_id) { 
+                                ?>
+                                		<li><a href="sessionUnset.php">로그아웃</a></li>
+                               	<?php }
+                               		else {?>
+                               			 <li><a href="Login.php">로그인 및 회원가입</a></li>
+                               	<?php }?>
 							</ul>
 						</nav>
 					</div><!-- end of header -->
@@ -137,9 +147,12 @@
 		<div id="copyright">
 			<div class="container"> <span class="copyright">Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)</span>
 				<ul class="icons">
-					<li><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
-					<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
-					<li><a href="#" class="fa fa-google-plus"><span>Google+</span></a></li>
+					EunBeen
+						<li><a href="https://www.facebook.com/profile.php?id=100005544108128" class="fa fa-facebook"><span>Facebook_EunBeen</span></a></li>
+						<li><a class = "fa fa-google-plus" onclick="('vvvv980@gmail.com or s2017s40@e-mirim.hs.kr')"><span>Gmail_EunBeen</span></a></li>
+						SunYeong
+						<li><a href="https://www.facebook.com/profile.php?id=100010330358217" class="fa fa-facebook"><span>Facebook_SunYeong</span></a></li>
+						<li><a class = "fa fa-google-plus" onclick="alert('s2017i30@e-mirim.hs.kr')"><span>Gmail_SunYeong</span></a></li><p>
 				</ul>
 			</div>
 		</div>

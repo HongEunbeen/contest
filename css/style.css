@@ -25,7 +25,10 @@
 		color: #d84780;
 		text-decoration: underline;
 	}
-
+	button_a alt {
+			color: #d84780;
+			text-decoration: underline;
+	}
 	strong, b {
 		font-weight: 700;
 	}

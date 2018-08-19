@@ -1,6 +1,6 @@
 <?php
     include "dbconn.php";
-    include "session.php";
+    session_start();
 ?>
 <html>
 <head>
@@ -36,7 +36,15 @@
 								<li><a href="page1.php">쿠폰 보관함</a></li>
 								<li><a href="page2.php">근처 맛집 및 쿠폰</a></li>
 								<li><a href="page3.php">동네 지도</a></li>
-								<li><a href="Login.php">로그인 및 회원가입</a></li>
+								<?php
+								if ($session_id) { 
+                                ?>
+                                		<li><a href="sessionUnset.php">로그아웃</a></li>
+                               	<?php }
+                               		else {?>
+                               			 <li><a href="Login.php">로그인 및 회원가입</a></li>
+                               	<?php }?>
+								
 							</ul>
 						</nav>
 					</div><!-- end of header -->

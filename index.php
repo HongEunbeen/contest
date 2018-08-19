@@ -1,4 +1,6 @@
-
+<?php 
+    session_start();
+?>
 <!DOCTYPE HTML>
 
 <html>
@@ -24,7 +26,7 @@
 				<!-- Header -->
 					<div id="header" class="skel-panels-fixed">
 						<div id="logo">
-							<h1><a href="index.html">신홍 제작소</a></h1>
+							<h1><a href="index.php">신홍 제작소</a></h1>
 							<span class="tag">신홍 제작소</span>
 						</div><!--end of Logo -->
 						<nav id="nav">
@@ -33,7 +35,14 @@
 								<li><a href="page1.php">쿠폰 보관함</a></li>
 								<li><a href="page2.php">근처 맛집 및 쿠폰</a></li>
 								<li><a href="page3.php">동네 지도</a></li>
-								<li><a href="Login.php">로그인 및 회원가입</a></li>
+								<?php
+								if ($session_id) { 
+                                ?>
+                                		<li><a href="sessionUnset.php">로그아웃</a></li>
+                               	<?php }
+                               		else {?>
+                               			 <li><a href="Login.php">로그인 및 회원가입</a></li>
+                               	<?php }?>
 							</ul>
 						</nav>
 					</div><!-- end of header -->

@@ -1,5 +1,6 @@
 <?php  include "dbconn.php";
-       include "session.php"?>
+        session_start();
+?>
 <!DOCTYPE HTML>
 <!--
 	Phase Shift by TEMPLATED
@@ -45,7 +46,14 @@
 								<li><a href="page1.php">쿠폰 보관함</a></li>
 								<li><a href="page2.php">근처 맛집 및 쿠폰</a></li>
 								<li><a href="page3.php">동네 지도</a></li>
-								<li><a href="Login.php">로그인 및 회원가입</a></li>
+								<?php
+								if ($session_id) { 
+                                ?>
+                                		<li><a href="sessionUnset.php">로그아웃</a></li>
+                               	<?php }
+                               		else {?>
+                               			 <li><a href="Login.php">로그인 및 회원가입</a></li>
+                               	<?php }?>
 							</ul>
 						</nav>
 					</div><!-- end of header -->
@@ -56,15 +64,15 @@
                               <div class="row no-collapse-1">
 								<section class="4u"> <a href="#" class="image featured"><img src="images/coupon1.png" alt=""></a>
 									<div class="box">
-										<a href="#" class="button">쿠폰 받기</a> </div>
+										<a href="page2_php.php?result1=<?=1?>" class="button">쿠폰 받기</a></div>
 								</section>
 								<section class="4u"> <a href="#" class="image featured"><img src="images/coupon2.png" alt=""></a>
 									<div class="box">
-										<a href="#" class="button">쿠폰 받기</a> </div>
+										<a href="page2_php.php?result2=<?=1?>" class="button">쿠폰 받기</a> </div>
 								</section>
 								<section class="4u"> <a href="#" class="image featured"><img src="images/coupon3.png" alt=""></a>
 									<div class="box">
-										<a href="#" class="button">쿠폰 받기</a> </div>
+										<a href="page2_php.php?result3=<?=1?>" class="button">쿠폰 받기</a> </div>
 								</section>
 							</div><!-- end of row no-collapse-1 -->
 						   </div><!-- end of row -->
@@ -73,7 +81,6 @@
 				<!-- /Main --> 
 
 	</div>
-
 	<!-- Footer -->
 		<div id="footer" class="wrapper style2">
 			<div class="container">
