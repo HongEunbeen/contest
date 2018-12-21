@@ -9,12 +9,14 @@
 
 /* Basic */
 
+img { max-width:100%; height:auto }
+
 	body {
-		background: #0f1116;
+		background: black;
 	}
 
 	body, span, input, select, textarea {
-		color: #555555;
+		color: #6E4BFF;
 		font-family: 'Raleway', sans-serif;
 		font-size: 12pt;
 		font-weight: 300;
@@ -22,7 +24,7 @@
 	}
 
 	a {
-		color: #d84780;
+		color: #53FF32;
 		text-decoration: underline;
 	}
 	button_a alt {

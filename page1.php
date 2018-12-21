@@ -1,22 +1,25 @@
- <?php include "dbconn.php";
-            $sql = "select * from signup where coupon1 == 1  or coupon2 == 1 or coupon3== 1";
+<?php session_start();?>
+ <?php       
+             include "dbconn.php";
+                        
+            $sql = "select * from signup where (coupon1 = 1 or coupon2 = 1 or coupon3 = 1) and id = '$session_id'";
             $result = mysql_query($sql);
-            $row = mysql_fetch_array($result);  
-             
-            $coupon1       = $row[counpon1];
-            $coupon2       = $row[counpon2];
-            $coupon3       = $row[counpon3];
+            $row = mysql_fetch_array($result);
+            
+            $coupon1 = $row['coupon1'];
+            $coupon2 = $row['coupon2'];
+            $coupon3 = $row['coupon3'];
+            
  ?>
-
+ 
 <!DOCTYPE HTML>
 
 <html>
 	<head>
-		<title>Left Sidebar - Phase Shift by TEMPLATED</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>
 		<script src="js/skel.min.js"></script>
@@ -44,7 +47,7 @@
 								<li class="active"><a href="index.php">지역 소개</a></li>
 								<li><a href="page1.php">쿠폰 보관함</a></li>
 								<li><a href="page2.php">근처 맛집 및 쿠폰</a></li>
-								<li><a href="page3.php">동네 지도</a></li>
+								<li><a href="page3.php">관광소음?</a></li>
 								<?php
 								if ($session_id) { 
                                 ?>
@@ -66,48 +69,17 @@
 								<section>
 									<div class="row half">
 										<section class="6u">
-											<?php if($coupon1){?>
-														<img src="images/coupon_code1.png" />
-											<?php }else if($coupon2){?>
-														<img src="images/coupon_code2.png" />
-											<?php }else if($coupon3){?>
-														<img src="images/coupon_code3.png" />
-											<?php }?>
+											<img src="images/coupon_code1.png" />
+											<img src="images/coupon_code2.png" />
+											<img src="images/coupon_code3.png" />
+											<img src = "images/map_store.jpg">
 										</section>
 									</div>
 								</section>
 							</div>
-							
-							<!-- Content -->
-							<div id="content" class="8u skel-cell-important">
-								<section>
-									<header class="major">
-										<h2>Left Sidebar</h2>
-										<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
-									</header>
-									</section>
-							</div>
-		
 						</div>
 					</div>
 				<!-- /Page -->
-
-				<!-- Main -->
-					<div id="main">
-						<div class="container">
-							<div class="row"> 
-								
-								<!-- Content -->
-								<div class="6u">
-									
-								</div>
-								<div class="6u">
-									
-								</div>
-							</div>
-						</div>
-					</div>
-				<!-- /Main --> 
 
 	</div>
 	<!-- Copyright -->

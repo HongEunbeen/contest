@@ -45,7 +45,7 @@
 								<li class="active"><a href="index.php">지역 소개</a></li>
 								<li><a href="page1.php">쿠폰 보관함</a></li>
 								<li><a href="page2.php">근처 맛집 및 쿠폰</a></li>
-								<li><a href="page3.php">동네 지도</a></li>
+								<li><a href="page3.php">관광소음?</a></li>
 								<?php
 								if ($session_id) { 
                                 ?>
@@ -64,15 +64,15 @@
                               <div class="row no-collapse-1">
 								<section class="4u"> <a href="#" class="image featured"><img src="images/coupon1.png" alt=""></a>
 									<div class="box">
-										<a href="page2_php.php?result1=<?=1?>" class="button">쿠폰 받기</a></div>
+										<a href="page2_php.php?result=<?=1?>" class="button">쿠폰 받기</a></div>
 								</section>
 								<section class="4u"> <a href="#" class="image featured"><img src="images/coupon2.png" alt=""></a>
 									<div class="box">
-										<a href="page2_php.php?result2=<?=1?>" class="button">쿠폰 받기</a> </div>
+										<a href="page2_php.php?result=<?=2?>" class="button">쿠폰 받기</a> </div>
 								</section>
 								<section class="4u"> <a href="#" class="image featured"><img src="images/coupon3.png" alt=""></a>
 									<div class="box">
-										<a href="page2_php.php?result3=<?=1?>" class="button">쿠폰 받기</a> </div>
+										<a href="page2_php.php?result=<?=3?>" class="button">쿠폰 받기</a> </div>
 								</section>
 							</div><!-- end of row no-collapse-1 -->
 						   </div><!-- end of row -->
@@ -87,8 +87,7 @@
 				<div id="extra">
 						<div class="container">
 						<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=ko"></script>                                                        
-                                <div id="map_canvas" style="width:600px; height:400px;"></div>
-							
+                                <div id="map_canvas" style="width:600px; height:400px;"></div>			
 						</div><!-- end of container -->
 					</div><!-- end of extra -->
 			</div>

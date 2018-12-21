@@ -5,10 +5,11 @@
 
 <html>
 	<head>
-		<title>Phase Shift by TEMPLATED</title>
+		<title></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
+		<meta name="description" content="" />		
 		<meta name="keywords" content="" />
+		<link rel="manifest" href="/manifest.webmanifest">
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>
 		<script src="js/skel.min.js"></script>
@@ -27,14 +28,14 @@
 					<div id="header" class="skel-panels-fixed">
 						<div id="logo">
 							<h1><a href="index.php">신홍 제작소</a></h1>
-							<span class="tag">신홍 제작소</span>
+							<span class="tag"><link rel="manifest" href="/manifest.json" />신홍 제작소</span>
 						</div><!--end of Logo -->
 						<nav id="nav">
 							<ul>
 								<li class="active"><a href="index.php">지역 소개</a></li>
 								<li><a href="page1.php">쿠폰 보관함</a></li>
 								<li><a href="page2.php">근처 맛집 및 쿠폰</a></li>
-								<li><a href="page3.php">동네 지도</a></li>
+								<li><a href="page3.php">관광소음?</a></li>
 								<?php
 								if ($session_id) { 
                                 ?>
@@ -46,10 +47,13 @@
 							</ul>
 						</nav>
 					</div><!-- end of header -->
-
-				<!-- Banner -->
 					<div id="banner" class="container">
-						<ul class="slides">
+						<div id="main">
+					  		<div class="container">
+								<div class="row"> 
+                              		<div class="row no-collapse-1">
+                              		<section class="6u">
+											<ul class="slides">
 						    <input type="radio" name="radio-btn" id="img-1"checked />
 						    <li class="slide-container">
 						 	 <div class="slide">
@@ -109,18 +113,13 @@
 						      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
 						      <label for="img-5" class="nav-dot" id="img-dot-5"></label>
 						    </li>
-						</ul>
+						</ul></section>
+									</div><!-- end of row no-collapse-1 -->
+						  		 </div><!-- end of row -->
+							</div><!-- end of container -->
+						</div><!-- end of main -->
 					</div><!-- end of banner -->
-				<!-- Extra -->
-
-				<!-- Main -->
-					<div id="main">
-						<div class="container">
-							<div class="row"> 
-
-							</div><!-- end of row -->
-						</div><!-- end of container -->
-					</div><!-- end of main -->
+				<!-- Banner -->
 
 	</div>
 	<!-- Copyright -->

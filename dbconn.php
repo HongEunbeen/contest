@@ -1,7 +1,7 @@
 <?php
-    $connect = mysql_connect("localhost","emirim","1234");
+    $connect = mysql_connect("localhost","shinhong","shinhong123");
     
-    mysql_select_db("contest",$connect);
+    mysql_select_db("shinhong",$connect);
     
     mysql_query("set names utf8");
     

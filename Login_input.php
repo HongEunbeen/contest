@@ -3,7 +3,9 @@
     session_start();
     
     $sql = "select * from signup where id='$id' and pwd='$pwd'";
+    
     $result = mysql_query($sql);
+
     $count = mysql_num_rows($result); //-> select * 이었을 때
     $row=mysql_fetch_array($result);
 

@@ -35,7 +35,7 @@
 								<li class="active"><a href="index.php">지역 소개</a></li>
 								<li><a href="page1.php">쿠폰 보관함</a></li>
 								<li><a href="page2.php">근처 맛집 및 쿠폰</a></li>
-								<li><a href="page3.php">동네 지도</a></li>
+								<li><a href="page3.php">관광소음?</a></li>
 								<?php
 								if ($session_id) { 
                                 ?>
@@ -56,7 +56,7 @@
 		<div class="card">
 		<form action = "Login_input.php" method = "POST">
             <h5 class="form-signin-heading">로그인 정보를 입력하세요</h5>
-            <label for="inputEmail" class="sr-only">Your ID</label>
+            <label for="inputEmail" class="sr-only">Your ID</label>z
             <input type="text" name="id" class="form-control" placeholder="Your ID" required autofocus value = "<?php echo $session_id?>"><BR>
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" name="pwd" class="form-control" placeholder="Password" required><br>
